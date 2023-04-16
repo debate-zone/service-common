@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./build",
+    "declaration": true,
+    "include": ["src"],
+    "allowSyntheticDefaultImports": true
+  }
+}
