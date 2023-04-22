@@ -9,7 +9,7 @@ export class BaseDbController<M extends BaseModel> {
         this.model = model
     }
 
-    save(item: Partial<M>, filter?: FilterQuery<M>): Promise<M | null> {
+    save(filter: FilterQuery<M>, item: Partial<M>): Promise<M | null> {
         return this.model.updateOne(filter, item, {
             upsert: true,
             new: true,
