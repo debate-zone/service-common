@@ -45,8 +45,11 @@ git clone https://gitlab.com/debate-zone/debate-zone-micro-service-common-librar
    13. Repeat
 
 
-1. To use it:
-   1. Add line below to your .npmrc file:
+## Usage
+
+To use the Debate Zone Microservice Common Library in your project, import the package and use the exported functions.
+
+1. Add line below to your .npmrc file:
 ```
 @debate-zone:registry=https://gitlab.com/api/v4/packages/npm/
 ```
