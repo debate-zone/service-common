@@ -1,4 +1,4 @@
-import { Schema } from "mongoose"
+import { Schema } from 'mongoose';
 
 export const baseSchema: Schema = new Schema(
     {
@@ -9,5 +9,5 @@ export const baseSchema: Schema = new Schema(
     },
     {
         timestamps: true,
-    }
-)
+    },
+);

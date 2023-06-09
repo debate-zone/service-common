@@ -1,8 +1,8 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "outDir": "./build",
-    "declaration": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "./build",
+        "declaration": true,
+        "allowSyntheticDefaultImports": true
+    }
 }
