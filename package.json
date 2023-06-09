@@ -8,7 +8,7 @@
         "lint": "eslint --ext .ts .",
         "lint:fix": "eslint --ext .ts ./src --fix",
         "format:check": "prettier --ignore-path .gitignore --check \"**/*.+(ts|json)\"",
-        "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
+        "format": "prettier --ignore-path .gitignore --write \"./src/*.+(ts|json)\"",
         "prepublishOnly": "npm test && npm run format:check",
         "semantic-release": "semantic-release"
     },
