@@ -1,14 +1,15 @@
 {
     "name": "@debate-zone/micro-service-common-library",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "description": "Shared library for debate zone micro services",
     "scripts": {
         "build": "tsc",
         "test": "jest --passWithNoTests",
         "lint": "eslint --ext .ts .",
         "lint:fix": "eslint --ext .ts ./src --fix",
+        "format:check": "prettier --ignore-path .gitignore --check \"**/*.+(ts|json)\"",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
-        "prepublishOnly": "npm test && npm run lint",
+        "prepublishOnly": "npm test && npm run format:check",
         "semantic-release": "semantic-release"
     },
     "publishConfig": {
