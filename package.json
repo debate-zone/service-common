@@ -1,40 +1,48 @@
 {
-  "name": "@debate-zone/micro-service-common-library",
-  "version": "1.0.0",
-  "description": "Shared library for debate zone micro services",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --ext .ts . --fix",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
-    "prepublishOnly": "npm test && npm run lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/debate-zone/debate-zone-micro-service-common-library.git"
-  },
-  "author": "Grig Theo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/debate-zone/debate-zone-micro-service-common-library/issues"
-  },
-  "homepage": "https://gitlab.com/debate-zone/debate-zone-micro-service-common-library#readme",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
-    "eslint": "^8.38.0",
-    "prettier": "^2.8.7",
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "jest": "^29.5.0",
-    "mongoose": "^7.0.3",
-    "zod": "^3.21.4"
-  },
-  "types": "./build/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@debate-zone/micro-service-common-library",
+    "version": "1.0.0",
+    "description": "Shared library for debate zone micro services",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "lint": "eslint --ext .ts .",
+        "lint:fix": "eslint --ext .ts ./src --fix",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
+        "prepublishOnly": "npm test && npm run lint",
+        "semantic-release": "semantic-release"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "build"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/debate-zone/debate-zone-micro-service-common-library.git"
+    },
+    "author": "Grig Theo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/debate-zone/debate-zone-micro-service-common-library/issues"
+    },
+    "homepage": "https://gitlab.com/debate-zone/debate-zone-micro-service-common-library#readme",
+    "devDependencies": {
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/gitlab": "^12.0.2",
+        "@semantic-release/npm": "^10.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.58.0",
+        "@typescript-eslint/parser": "^5.58.0",
+        "eslint": "^8.38.0",
+        "prettier": "^2.8.7",
+        "semantic-release": "^21.0.3",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "axios": "^1.4.0",
+        "jest": "^29.5.0",
+        "mongoose": "^7.0.3",
+        "zod": "^3.21.4"
+    },
+    "types": "./build/index.d.ts"
 }
