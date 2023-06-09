@@ -8,8 +8,9 @@ export class BaseDbController<M extends BaseModel> {
     this.model = model
   }
 
-  create(item: Partial<M>): Promise<M> {
-    return this.model.create(item)
+  async create(item: Partial<M>): Promise<M> {
+    const createdObject = await this.model.create(item)
+    return createdObject.toObject()
   }
 
   save(filter: FilterQuery<M>, item: Partial<M>): Promise<M | null> {

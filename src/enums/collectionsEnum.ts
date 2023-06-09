@@ -3,4 +3,6 @@ export enum CollectionsEnum {
   DEBATE_ZONE = "debateZone",
   USER = "user",
   NOTIFICATION = "notification",
+  DISCOURSE_DEFENDER = "discourseDefender",
+  STREAMING = "streaming"
 }
