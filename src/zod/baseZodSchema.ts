@@ -1,9 +1,18 @@
 import { z } from 'zod'
 
+export const idObjectIdsSchema = z.any().transform((val) => {
+    if (typeof val === 'string') {
+        return val
+    }
+    if (typeof val === 'object' && val !== null) {
+        return val.toString()
+    }
+    return val
+})
+
 export const baseZodSchema = z
   .object({
-    // convert to string from ObjectId and viche versa
-    _id: z.any().transform((val) => val.toString()),
+    _id: idObjectIdsSchema,
     __v: z.number().optional(),
     isDeleted: z.boolean().default(false),
     createdAt: z.date().optional(),
