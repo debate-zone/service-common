@@ -5,4 +5,5 @@ export enum CollectionsEnum {
     NOTIFICATION = 'notification',
     DISCOURSE_DEFENDER = 'discourseDefender',
     STREAMING = 'streaming',
+    TEXT_HELPER = 'textHelper',
 }

@@ -43,8 +43,11 @@ export class BaseDbController<M extends BaseModel> {
         return this.model.findOne(query, {}).lean().exec();
     }
 
-    findAll(filter: FilterQuery<M>): Promise<M[]> {
+    findAll(
+        filter: FilterQuery<M>,
+        arg?: { [key: string]: 'asc' | 'desc' },
+    ): Promise<M[]> {
         const query: FilterQuery<M> = { isDeleted: false, ...filter };
-        return this.model.find(query).lean().exec();
+        return this.model.find(query).sort(arg).lean().exec();
     }
 }

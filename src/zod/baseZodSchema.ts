@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import mongoose from 'mongoose';
 
 export const idObjectIdsSchema = z.any().transform(val => {
     if (typeof val === 'string') {
@@ -22,7 +23,13 @@ export const baseZodSchema = z
 
 export const newBaseZodSchema = baseZodSchema.deepPartial();
 
-export const emailSchema = z.string().email().trim().min(5).max(50);
+export const emailSchema = z
+    .string()
+    .email()
+    .trim()
+    .min(5)
+    .max(50)
+    .toLowerCase();
 
 export const phoneNumberSchema = z
     .string()
