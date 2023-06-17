@@ -4,11 +4,16 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/gitlab",
-    "@semantic-release/npm",
+    [
+      "@semantic-release/npm",
+        {
+          "pkgRoot": "build"
+        }
+    ],
     [
       "@semantic-release/git",
       {
-        "assets": ["src/**/*.{ts}",  "build/**/*.{js,ts}", "package.json", "README.md"],
+        "assets": ["package.json"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
