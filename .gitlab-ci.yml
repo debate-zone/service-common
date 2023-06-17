@@ -19,8 +19,18 @@ workflow:
 variables:
   NPM_TOKEN: ${CI_JOB_TOKEN}
 
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
 stages:
   - release
+  - build
 
 publish:
   stage: release
