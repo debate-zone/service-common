@@ -1,6 +1,6 @@
 {
     "name": "@debate-zone/micro-service-common-library",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "Shared library for debate zone micro services",
     "scripts": {
         "build": "tsc",
