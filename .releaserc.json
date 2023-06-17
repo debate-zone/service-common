@@ -6,20 +6,7 @@
     [
       "@semantic-release/gitlab",
       {
-        "assets": [
-          {
-            "path": "build",
-            "label": "Build artifacts"
-          },
-          {
-            "path": "package.json",
-            "label": "Package json file"
-          },
-          {
-            "path": "README.md",
-            "label": "Readme file"
-          }
-        ]
+        "assets": ["build/**/*"]
       }
     ],
     "@semantic-release/npm",
