@@ -23,12 +23,15 @@ export class BaseDbController<M extends BaseModel> {
             .exec();
     }
 
-    delete(id: string): Promise<M | null> {
+    delete(id: string, filter?: FilterQuery<M>): Promise<M | null> {
         return this.model
-            .updateOne(
-                { _id: id },
+            .findOneAndUpdate(
                 {
-                    deleted: true,
+                    _id: id,
+                    ...filter,
+                },
+                {
+                    isDeleted: true,
                 },
                 {
                     new: true,
