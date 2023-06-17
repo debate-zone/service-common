@@ -3,14 +3,26 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/gitlab",
     [
-      "@semantic-release/npm",
-        {
-            "tarballDir": "build",
-            "pkgRoot": "build"
-        }
+      "@semantic-release/gitlab",
+      {
+        "assets": [
+          {
+            "path": "build/*.{js,ts}",
+            "label": "Build artifacts"
+          },
+          {
+            "path": "package.json",
+            "label": "Package json file"
+          },
+          {
+            "path": "README.md",
+            "label": "Readme file"
+          }
+        ]
+      }
     ],
+    "@semantic-release/npm",
     [
       "@semantic-release/git",
       {
