@@ -8,7 +8,7 @@
       {
         "assets": [
           {
-            "path": "build/*.{js,ts}",
+            "path": "build",
             "label": "Build artifacts"
           },
           {
