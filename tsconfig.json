@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
+        "target": "ES2015",
         "strict": true,
         "outDir": "./build",
         "declaration": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
     }
 }
