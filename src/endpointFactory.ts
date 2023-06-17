@@ -7,9 +7,6 @@ import { z } from 'zod';
 //         const userId = request.headers['x-user-id'] as string;
 //         const userRole = request.headers['x-user-role'] as string;
 //
-//         setUserIdInContext(userId);
-//         setUserRoleInContext(userRole);
-//
 //         return {
 //             userId,
 //             userRole,

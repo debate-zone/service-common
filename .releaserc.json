@@ -7,7 +7,7 @@
     [
       "@semantic-release/npm",
         {
-            "tarballDir": "."
+            "tarballDir": "build"
         }
     ],
     [
