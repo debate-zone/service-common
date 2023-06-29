@@ -2,7 +2,7 @@ import { BaseModel } from '../types/baseTypes';
 import { Model, FilterQuery } from 'mongoose';
 
 export class BaseDbController<M extends BaseModel> {
-    private model: Model<any>;
+    protected model: Model<any>;
 
     constructor(model: Model<any>) {
         this.model = model;
@@ -17,7 +17,6 @@ export class BaseDbController<M extends BaseModel> {
         return this.model
             .findOneAndUpdate(filter, item, {
                 new: true,
-                upsert: true,
             })
             .lean()
             .exec();
